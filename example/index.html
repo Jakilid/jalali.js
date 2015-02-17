@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>jalali.js usage example</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+
+<script src="../jalali-min.js"></script>
+<script>
+	var now = new Date();
+	
+	var jDate = gregorian_to_jalali(now.getFullYear(), now.getMonth(), now.getDate());
+	var gDate = jalali_to_gregorian(jDate.year , jDate.month , jDate.day);
+	document.write('Today: ' + now + "<br>");
+	document.write('Today in jalali calender: ' + jDate.year + '/' + jDate.month + '/' + jDate.day + "<br>");
+	document.write('jalali to gregorian calender: ' + new Date(gDate.year , gDate.month , gDate.day) );
+</script>
+
+
+</body>
+</html>
